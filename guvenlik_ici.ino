@@ -34,8 +34,7 @@ void loop()
    digitalWrite(trig_pin,LOW);
    sure2=pulseIn(echo_pin,HIGH);
    mesafe2=(sure2)/29.1/2;
-   if (mesafe2!=mesafe-5&&mesafe2!=mesafe-4&&mesafe2!=mesafe-3&&mesafe2!=mesafe-2&&mesafe2!=mesafe-1&&
-   mesafe2!=mesafe+1&&mesafe2!=mesafe+2&&mesafe2!=mesafe+3&&mesafe2!=mesafe+4&&mesafe2!=mesafe+5&&mesafe2!=mesafe)
+   if (mesafe2<mesafe-5||mesafe2>mesafe+5)
    {
       digitalWrite(kirmizi,HIGH);
       digitalWrite(yesil,LOW);
